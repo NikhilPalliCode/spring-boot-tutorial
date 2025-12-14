@@ -1,6 +1,7 @@
 package com.nutorials.spring_demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -10,7 +11,8 @@ public class Dev {
     Field Injection
     */
     @Autowired
-    Laptop laptop;
+    @Qualifier("laptop")
+    Computer computer;
 
     /*
     Constructor Injection
@@ -25,7 +27,7 @@ public class Dev {
     }
     */
     public void build(){
-        laptop.compile();
+        computer.compile();
         System.out.println("Working on the project");
     }
 }

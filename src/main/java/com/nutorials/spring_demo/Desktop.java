@@ -5,8 +5,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Primary
-public class Laptop implements Computer{
-    public void compile(){
-        System.out.println("Compiling with 10 bugs");
+public class Desktop implements Computer{
+    @Override
+    public void compile() {
+        System.out.println("Compiling 10 bugs but faster..");
     }
 }
